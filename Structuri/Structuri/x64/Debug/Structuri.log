@@ -1,0 +1,4 @@
+﻿  Structuri.c
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Structuri\Structuri\Structuri.c(36,21): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Structuri\Structuri\Structuri.c(49,21): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+  Structuri.vcxproj -> C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Structuri\x64\Debug\Structuri.exe
