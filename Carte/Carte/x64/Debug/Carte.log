@@ -1,0 +1,3 @@
+﻿  Carte.c
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Carte\Carte\Carte.c(105,61): warning C4305: 'function': truncation from 'double' to 'float'
+  Carte.vcxproj -> C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Carte\x64\Debug\Carte.exe
