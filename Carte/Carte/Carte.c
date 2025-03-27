@@ -99,6 +99,23 @@ void dezalocare(struct Carte* carte) {
 }
 
 int main() {
+	int nr = 3;
+	struct Carte* carti = (struct Carte*)malloc(sizeof(struct Carte) * nr);
+	int vectorCapitole1[] = { 1, 2, 3 };
+	carti[0] = initializare(200, vectorCapitole1, "Frumoasa si bestia", 95.2, 3);
+	int vectorCapitole2[] = { 1, 2, 3, 4 };
+	carti[1] = initializare(300, vectorCapitole2, "Muntele dintre noi", 120.5, 4);
+	int vectorCapitole3[] = { 1, 2, 3, 4, 5 };
+	carti[2] = initializare(400, vectorCapitole3, "Cartea visurilor", 150.0, 5);
+	for (int i = 0; i < nr; i++) {
+		afisare(carti[i]);
+		printf("\n");
+	}
+
+	for (int i = 0; i < nr; i++) {
+		dezalocare(&carti[i]);
+	}
+
 	struct Carte c1;
 	int vectorCapitole[] = { 1,2,3 };
 	int* capitole = vectorCapitole;
@@ -111,6 +128,6 @@ int main() {
 	numarCapitolePare(c2);
 	modificarePret(&c1, 100.5);
 	afisare(c1);
-	return 0;
 
+	return 0;
 }
