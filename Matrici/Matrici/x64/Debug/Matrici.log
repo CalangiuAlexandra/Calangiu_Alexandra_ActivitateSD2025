@@ -1,0 +1,8 @@
+﻿  Matrici.c
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(46,9): warning C4033: 'adunare_matrici' must return a value
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(63,9): warning C4033: 'scadere_matrici' must return a value
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(80,9): warning C4033: 'inmultire_matrici' must return a value
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(95): warning C4715: 'inmultire_matrici': not all control paths return a value
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(75): warning C4715: 'scadere_matrici': not all control paths return a value
+C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\Matrici\Matrici.c(58): warning C4715: 'adunare_matrici': not all control paths return a value
+  Matrici.vcxproj -> C:\Users\Stefan\source\repos\Calangiu_Alexandra_ActivitateSD2025\Matrici\x64\Debug\Matrici.exe
