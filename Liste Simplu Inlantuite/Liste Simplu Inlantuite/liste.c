@@ -102,21 +102,72 @@ void stergeDupaDenumire(struct Nod** cap, const char* denumire) {
     printf("Cartea '%s' a fost stearsa cu succes.\n", denumire);
 }
 
+void inserareMijloc(struct Nod** cap, struct Carte c, int pozitie) {
+    if (pozitie < 0) {
+        printf("Pozitia trebuie sa fie mai mare sau egala cu 0.\n");
+        return;
+    }
+
+    struct Nod* nou = (struct Nod*)malloc(sizeof(struct Nod));
+    nou->carte = c;
+
+    if (pozitie == 0) {
+        nou->urmator = *cap;
+        *cap = nou;
+        return;
+    }
+
+    struct Nod* temp = *cap;
+    for (int i = 0; i < pozitie - 1 && temp != NULL; i++) {
+        temp = temp->urmator;
+    }
+
+    if (temp == NULL) {
+        printf("Lista nu are atatea elemente. Se va adauga la sfarsit.\n");
+        inserareSfarsit(cap, c);
+    }
+    else {
+        nou->urmator = temp->urmator;
+        temp->urmator = nou;
+    }
+}
+
+void inserareInceput(struct Nod** cap, struct Carte c) {
+    struct Nod* nou = (struct Nod*)malloc(sizeof(struct Nod));
+    if (nou == NULL) {
+        printf("Eroare la alocarea memoriei!\n");
+        return;
+    }
+    nou->carte = c;
+    nou->urmator = *cap;
+    *cap = nou;
+}
+
 int main() {
     struct Nod* lista = NULL;
 
     int capitole1[] = { 1, 2, 3 };
     int capitole2[] = { 4, 5, 6, 7 };
+    int capitole3[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int capitole4[] = { 1, 2, 3, 4, 5, 6 };
 
     struct Carte basme = initializare(150, capitole1, "Basme", 45.0f, 3);
     struct Carte moaraCuNoroc = initializare(250, capitole2, "Moara cu Noroc", 60.0f, 4);
+    struct Carte enciclopediaIstorica = initializare(300, capitole3, "Enciclopedie Istorica", 75.0f, 10);
+    struct Carte alchimistul = initializare(300, capitole4, "Alchimistul", 75.0f, 6);
 
     inserareSfarsit(&lista, basme);
     inserareSfarsit(&lista, moaraCuNoroc);
 
     afisareLista(lista);
 
+    inserareMijloc(&lista, enciclopediaIstorica, 1);
+    afisareLista(lista);
+
     stergeDupaDenumire(&lista, "Basme");
+    afisareLista(lista);
+
+    inserareInceput(&lista, alchimistul);
     afisareLista(lista);
 
     dezalocareLista(&lista);
